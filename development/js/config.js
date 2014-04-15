@@ -18,7 +18,8 @@ require.config({
 	//
 
 	paths: {
-		'jquery': ['//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min', 'libs/jquery-1.10.2.min']
+		'jquery': ['//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min', 'libs/jquery-1.10.2.min'],
+		'impress' : 'libs/impress'
 	}
 
 });

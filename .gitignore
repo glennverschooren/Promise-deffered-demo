@@ -1,0 +1,8 @@
+deploy
+node_modules
+.sass-cache/
+.tmp/
+.idea
+target
+*.iml
+/deploy
