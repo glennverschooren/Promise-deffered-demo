@@ -1,0 +1,14 @@
+//
+// CSS3 KEYFRAME GENERATOR MIXIN -----------------------------------------------------
+// Creates keyframes to be used with CSS3 keyframe animations
+// https://gist.github.com/Integralist/3931680
+//
+
+@mixin css-keyframes($animation-name) {
+
+	@-webkit-keyframes $animation-name { @content; }
+	@-moz-keyframes $animation-name { @content; }
+	@-o-keyframes $animation-name { @content; }
+	@keyframes $animation-name { @content; }
+
+}

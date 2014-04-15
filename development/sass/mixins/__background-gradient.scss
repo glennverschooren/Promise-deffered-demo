@@ -1,0 +1,14 @@
+//
+// CSS3 BACKGROUND GRADIENT MIXIN ----------------------------------------------------
+// Combined Compass mixin to a custom mixin for CSS3 background gradients
+// Note: IE9 doesn't support this, we use a solid background instead (the darkest color)
+//
+
+@mixin background-gradient($from, $to, $direction: bottom) {
+
+	// IE9 fallback
+	background-color: $from;
+	// Others
+	background: linear-gradient(to $direction, $from, $to);
+
+}

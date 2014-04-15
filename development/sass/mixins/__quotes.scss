@@ -1,0 +1,12 @@
+//
+// QUOTES MIXIN ----------------------------------------------------------------------
+// Mixin to adds "quotes" to text, use single quotes for IE8 support
+// http://www.cssbakery.com/2010/12/html-blockquote-element-css-content-and.html
+//
+
+@mixin quotes {
+
+	&:before { content: '\201C'; }
+	&:after{ content: '\201D'; }
+
+}

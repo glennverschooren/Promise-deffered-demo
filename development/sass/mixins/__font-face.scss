@@ -1,0 +1,21 @@
+//
+// FONT-FACE MIXIN -------------------------------------------------------------------
+// Extends the Compass mixin so only a font-name & file-name are needed
+// http://compass-style.org/reference/compass/css3/font_face
+//
+
+@mixin css-font-face($name, $url) {
+
+	@include font-face(
+		$name,
+
+		font-files(
+		$url +".woff", 
+		$url +".ttf", 
+		$url +".svg#webfont"),
+		$url +".eot",
+
+		"normal", "normal"
+	);
+
+}

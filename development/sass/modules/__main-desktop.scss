@@ -1,0 +1,35 @@
+//
+// TABLET PORTRAIT -------------------------------------------------------------------
+//
+
+@media screen and (min-width: $tablet-portrait) {
+
+}
+
+
+//
+// TABLET LANDSCAPE & DESKTOP --------------------------------------------------------
+//
+
+@media screen and (min-width: $tablet-landscape) {
+
+}
+
+
+//
+// FULLSCREEN ------------------------------------------------------------------------
+//
+
+@include fullscreen("body") {
+
+}
+
+
+//
+// RETINA SUPPORT FOR HDPI SCREENS ---------------------------------------------------
+// Note: this will not prevent assets getting loaded 2x (normal + hdpi)
+//
+
+@include retinaSupport() { 
+
+}

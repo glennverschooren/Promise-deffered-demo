@@ -1,0 +1,44 @@
+//
+// MOBILE FIRST (< 768px) ------------------------------------------------------------
+//
+
+@charset "utf-8";
+@import "__settings";
+@import "__normalize";
+
+
+// FIX BROKEN BOX-MODEL 
+// Note: doesn't work in IE7 (padding is still added to the box width/height)
+// https://developer.mozilla.org/en-US/docs/CSS/box-sizing
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+
+// CLEARFIX
+// http://www.css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
+.clear:before, .clear:after { content: ""; display: table; }
+.clear:after { clear: both; }
+
+
+//
+// GENERAL ---------------------------------------------------------------------------
+//
+
+
+
+
+
+
+
+
+//
+// STRUCTURAL HELPERS ----------------------------------------------------------------
+//
+
+
+
+
+

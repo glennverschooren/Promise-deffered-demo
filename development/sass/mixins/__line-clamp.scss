@@ -1,0 +1,17 @@
+//
+// LINE-CLAMP MIXIN ------------------------------------------------------------------
+// Trim multiline text and add ellipsis (...)
+// Note: only works in Webkit & Safari
+// http://www.css-101.org/articles/line-clamp/line-clamp_for_non_webkit-based_browsers.php
+//
+
+@mixin line-clamp($lines) {
+
+	overflow: hidden;
+	display: -webkit-box;
+	text-overflow: ellipsis;
+	-webkit-box-orient: vertical;
+	// Number of lines to show
+	-webkit-line-clamp: $lines;
+
+}

@@ -1,0 +1,22 @@
+//
+// MOBILE PORTRAIT -------------------------------------------------------------------
+//
+
+
+//
+// MOBILE LANDSCAPE ------------------------------------------------------------------
+//
+
+@media screen and (min-width: $mobile-landscape) { 
+
+}
+
+
+//
+// RETINA SUPPORT FOR HDPI SCREENS ---------------------------------------------------
+// Note: this will not prevent assets getting loaded 2x (normal + hdpi)
+//
+
+@include retinaSupport() { 
+
+}

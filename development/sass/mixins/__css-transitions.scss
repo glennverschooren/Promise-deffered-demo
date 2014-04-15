@@ -1,0 +1,21 @@
+//
+// CSS3 TRANSITIONS MIXIN ------------------------------------------------------------
+// Extended Compass CSS transition mixin
+// http://blog.teamtreehouse.com/increase-your-sites-performance-with-hardware-accelerated-css
+//
+
+@mixin css-transition($prop, $time, $easing, $gpu: "true") {
+
+	// Add transition & prevent flickering
+	@include transition($prop $time $easing);	
+	@include backface-visibility(hidden);
+	// Enable hardware acceleration
+	// Webfont icons may looked blurred on hdpi screens
+	// caused by the paint-layer invoked by acceleration
+	// so we make this an optional setting
+	@if $gpu == "true" {
+		@include perspective(1000);
+		@include translateZ(0);
+	}
+
+}

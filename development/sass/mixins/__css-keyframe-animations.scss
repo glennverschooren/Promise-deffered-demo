@@ -1,0 +1,20 @@
+//
+// CSS3 KEYFRAME ANIMATION MIXIN -----------------------------------------------------
+// Create CSS3 Keyframe Animation
+// https://gist.github.com/Integralist/3931680
+//
+
+@mixin css-keyframe-animation($animation, $duration, $repeat: 1) {
+
+	// Enable hardware acceleration
+	// and prevent flickering
+	@include backface-visibility(hidden);
+	@include perspective(1000);
+	@include translateZ(0);
+	// Animate
+	@include experimental("animation-name", $animation, -webkit, -moz, -o, not -ms, not -khtml, official);
+	@include experimental("animation-duration", $duration, -webkit, -moz, -o, not -ms, not -khtml, official);
+	@include experimental("animation-iteration-count", $repeat, -webkit, -moz, -o, not -ms, not -khtml, official);
+	@include experimental("animation-fill-mode", forwards, -webkit, -moz, -o, not -ms, not -khtml, official);	
+
+}

@@ -1,0 +1,23 @@
+//
+// FULLSCREEN MIXIN ------------------------------------------------------------------
+// Target Fullscreen specific CSS
+// http://davidwalsh.name/fullscreen
+// http://msdn.microsoft.com/en-us/library/ie/dn265028(v=vs.85).aspx
+//
+
+@mixin fullscreen($el) {
+
+	// :-webkit-full-screen #{$el} { @content; }
+	// :-moz-full-screen #{$el} { @content; }
+	// #{$el}:-ms-fullscreen { @content; }
+	// :fullscreen #{$el} { @content; }
+
+	// IE11 supports the fullscreen API, however it's not compliant
+	// with emerging standards & the IE11 specs aren't working well
+	// So for now we add a .fullscreen class to the document when
+	// fullscreen mode is triggered
+	// See js/utils/fullsceen.js for more info
+
+	.fullscreen #{$el} { @content; }
+
+}
