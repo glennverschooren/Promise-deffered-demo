@@ -115,6 +115,11 @@ a {
 
 }
 
+p {
+	font-size: 30px;
+	color: #666;
+}
+
 img {
 	display: block;
 }
@@ -123,6 +128,13 @@ li {
 	padding: .25em 0;
 	vertical-align: middle;
 	font-size: 25px;
+	> a {
+		display: inline-block;
+		font-size: 25px;
+		padding: 0px;
+		margin: 0px;
+	}
+
 }
 
 ul {
@@ -139,6 +151,17 @@ main {
 span {
 	color: #777;
 	font-weight: normal;
+}
+
+a {
+	display: block;
+	padding: 20px;
+	font-size: 20px;
+	color: #666;
+
+	&:hover {
+		color: black;
+	}
 }
 
 
@@ -165,6 +188,10 @@ span {
 	color: #666;
 }
 
+.no-padding {
+	padding: 0;
+}
+
 
 //
 // STYLE HELPERS ----------------------------------------------------------------------
@@ -172,6 +199,10 @@ span {
 
 .red {
 	color: red;	
+}
+
+.border-light-gray {
+	border: 1px solid #bbb;
 }
 
 
@@ -202,6 +233,7 @@ span {
 		background-color: #ddd;
 		width: 60px;
 		height: 60px;
+		padding: 0;
 
 		&:hover { color: #666;}
 	}

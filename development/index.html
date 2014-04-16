@@ -64,21 +64,103 @@
 			
 			<!-- ////////////////////////////SLIDE FOUR PROMISE /////////////////////////////////// -->
 			
-			<div id="promise" class="step" data-x="4000">
+			<div id="promise" class="step" data-x="6000">
 				<div class="inner">
 					<h1 class="text-center"> <strong>Promise?</strong>
 					</h1>
 
 					<ul>
-						<li>chainable utility object created by calling the jQuery.Deferred() method</li>
-						<li>Starts in <strong class="red">pending</strong> state, can only resolved once</li>
-						<li>One resolve can call <span>multiple</span> listeners</li>
-						<li>Has functions like (<span>reject()</span>, <span>resolved()</span>, <span>promise()</span>)</li>
-						<li>The Deferred object is chainable</li>
+						<li>Listening and state inspection (using <span>state()</span>), but no interface for changing the state </li>
+						<li>Basic listeners are <span>done()</span> and <span>fail()</span></li>
+						<li>Can be chained with <span>then()</span></li>
+						<li>Can be grouped and processed using <span>$.when()</span></li>
 					</ul>
 				</div>
 			</div>
+
+			<div id="how-deferrd" class="step" data-x="8000">
+				<div class="inner">
+					<h1 class="text-center"> <strong>How?</strong>
+					</h1>
+
+					<h2 class="text-center red">Conical Deferred</h2>
+					<p class="text-center">Setting up a listener and triggering it with resolve</p>
+
+					<img class="border-light-gray" style="margin:auto;" src="img/conical-deferred.png" alt="conical deferred" />
+				</div>
+			</div>
+
+			<div id="conical-promise" class="step" data-x="10000">
+				<div class="inner">
+					<h1 class="text-center red"> <strong>Conical promise + when </strong>
+					</h1>
+
+					
+					<p class="text-center">Return a Promise from a method and attach a listener to it (can have more than one)</p>
+
+					<img class="border-light-gray" style="margin:auto;" src="img/promise-when.png" alt="promise when" />
+
+					<a class="text-center" href="http://jsfiddle.net/8LQ3p/1/"> Fiddle example</a>
+				</div>
+			</div>
 			
+			<div id="rejection" class="step" data-x="12000">
+				<div class="inner">
+					<h1 class="text-center red"> <strong>Dealing with Rejection</strong>
+					</h1>
+
+					
+					<p class="text-center">Jquery Deferred / Promises VS Native Javascript</p>
+					
+					
+					<a class="text-center no-padding" href="http://jsfiddle.net/s42k7/5/"> Fiddle Jquery example</a> 	
+					<a class="text-center no-padding" href="http://jsfiddle.net/5QGtz/6/"> Fiddle native javascript example</a> 
+
+
+					<img class="border-light-gray" style="margin:auto; width: 900px" src="img/rejection.png" alt="Dealing with rejection" />
+					
+					<p>Example from <span class="red">Domenic Denicola's</span> blog post "You're Missing the Point of Promises", go and read it now!</p>
+				</div>
+			</div>
+
+			<div id="jquery-missing" class="step" data-x="14000">
+				<div class="inner">
+					<h1 class="text-center red"> <strong>jQuery is missing the point</strong>
+					</h1>
+
+					<p>A promise is defined as an object that has a function as the value for the property then:</p>
+
+					<h2>then(fulfilledHandler, errorHandler, progressHandler)</h2>	
+						
+					<p>This function should return a new promise that is fulfilled when the given fulfilledHandler or errorHandler callback is finished. This allows promise operations to be chained together. The value returned from the callback handler is the fulfillment value for the returned promise. If the callback throws an error, the returned promise will be moved to failed state.</p>
+					
+				</div>
+			</div>
+
+
+			<div id="more" class="step" data-x="14000">
+				<div class="inner">
+					<h1 class="text-center red"> More?
+					</h1>
+
+					<ul>
+						<li>
+							jQuery is not the only one, see <a href="http://wiki.commonjs.org/wiki/Promises/A">Promises/A</a> spec and the clarified <a href="http://promises-aplus.github.io/promises-spec/">Promises/A+</a> spec
+						</li>
+						<li>
+							
+							If you're not already using jQuery then <a href="https://github.com/kriskowal/q">Q</a>, <a href="https://github.com/tildeio/rsvp.js">rsvp.js</a> or <a href="https://github.com/cujojs/when">when</a> are better with interoperability by fully adhering to the specs.
+
+						</li>
+					</ul>
+					
+				</div>
+			</div>
+
+
+
+
+
 			
 
 		</div>
@@ -89,8 +171,9 @@
 		</div>
 
 	</main>
-
-
+	<!-- FIDDLE: http://jsfiddle.net/8LQ3p/1/ -->
+	<!-- JQUERY DEFERRED -> http://jsfiddle.net/s42k7/3/ -->
+	<!-- JAVASCRIPT PROMISE -> http://jsfiddle.net/5QGtz/1/ -->
 	<!-- SCRIPTS /////////////////////////////////////////////////////////////////// -->
 
 
